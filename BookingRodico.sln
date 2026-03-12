@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11605.240 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodico", "BookingRodico.csproj", "{2E76DF6E-8965-4522-94E1-E657B35F6647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingSystemModels", "..\..\..\..\source\repos\BookingSystemModels\BookingSystemModels.csproj", "{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoDataService", "..\..\..\..\source\repos\BookingRodicoDataService\BookingRodicoDataService.csproj", "{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoAppService", "..\..\..\..\source\repos\BookingRodicoAppService\BookingRodicoAppService.csproj", "{CE7ADE32-F2A3-4861-B028-2F1251553F10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

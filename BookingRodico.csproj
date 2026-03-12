@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\repos\BookingRodicoAppService\BookingRodicoAppService.csproj" />
+    <ProjectReference Include="..\..\..\..\source\repos\BookingSystemModels\BookingSystemModels.csproj" />
+  </ItemGroup>
+
 </Project>
