@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.4.11605.240 stable
+VisualStudioVersion = 18.4.11605.240
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodico", "BookingRodico.csproj", "{2E76DF6E-8965-4522-94E1-E657B35F6647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingSystemModels", "..\..\..\..\source\repos\BookingSystemModels\BookingSystemModels.csproj", "{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoAppService", "BookingRodicoAppService\BookingRodicoAppService.csproj", "{314F1B34-3AE2-874B-FC1F-339229DCD0F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoDataService", "..\..\..\..\source\repos\BookingRodicoDataService\BookingRodicoDataService.csproj", "{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoDataService", "BookingRodicoDataService\BookingRodicoDataService.csproj", "{BAE33102-4332-CA67-3366-E2682475057E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoAppService", "..\..\..\..\source\repos\BookingRodicoAppService\BookingRodicoAppService.csproj", "{CE7ADE32-F2A3-4861-B028-2F1251553F10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingSystemModels", "BookingSystemModels\BookingSystemModels.csproj", "{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +21,18 @@ Global
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0ED2AF8-88B2-4CCB-83EC-92219A3AABAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00ADCC20-4CAA-4FF5-BF3B-486A2855AC50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE7ADE32-F2A3-4861-B028-2F1251553F10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE33102-4332-CA67-3366-E2682475057E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE33102-4332-CA67-3366-E2682475057E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE33102-4332-CA67-3366-E2682475057E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE33102-4332-CA67-3366-E2682475057E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
