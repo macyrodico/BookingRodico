@@ -92,7 +92,7 @@ namespace BookingRodico
 
             }
 
-            Booking newBooking = new Booking
+            var newBooking = new Booking
             {
                 BookingId = Guid.NewGuid(),
                 PassengerName = name,
@@ -136,6 +136,8 @@ namespace BookingRodico
 
                 Console.WriteLine("Meals: " + booking.MealAmount);
 
+                
+
                 i++;
 
             }
@@ -152,8 +154,7 @@ namespace BookingRodico
 
            
 
-                if (name.ToLower() == name.ToLower())
-                {
+               
                     Console.Write("New Destination: ");
                     string destination = Console.ReadLine();
 
@@ -189,7 +190,7 @@ namespace BookingRodico
                    
 
                 }
-            }
+   
 
 
         static void DeleteBooking()
@@ -201,8 +202,6 @@ namespace BookingRodico
 
 
 
-                if (name.ToLower() == name.ToLower())
-                {
                     Console.Write("Are you sure you want to delete? (yes/no): ");
                     string confirm = Console.ReadLine();
 
@@ -225,7 +224,7 @@ namespace BookingRodico
 
             
     }
-}
+
     
 
 
