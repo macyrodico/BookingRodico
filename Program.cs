@@ -1,5 +1,4 @@
-﻿using System;
-using BookingRodicoAppService;
+﻿using BookingRodicoAppService;
 using BookingSystemModels;
 
 namespace BookingRodico
@@ -8,7 +7,7 @@ namespace BookingRodico
     class Program
     {
 
-        static BookingService bookingService = new BookingService();
+        static BookingAppService bookingService = new BookingAppService();
 
         static void Main(string[] args)
 
@@ -101,7 +100,7 @@ namespace BookingRodico
                 MealAmount = meal
             };
 
-            bookingService.AddBooking(newBooking);
+            bookingService.AddBooking(newBooking); 
 
             Console.WriteLine("Booking Added Successfully!");
 
@@ -127,7 +126,10 @@ namespace BookingRodico
             foreach (var booking in bookings)
             {
 
-                Console.WriteLine("Booking no. " + (i + 1));
+                Console.WriteLine("Booking no. " + i);
+
+                Console.WriteLine("Booking ID: " + booking.BookingId);
+
                 Console.WriteLine("Passenger name: " + booking.PassengerName);
 
                 Console.WriteLine("Destination: " + booking.Destination);
