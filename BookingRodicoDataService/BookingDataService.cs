@@ -1,53 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BookingSystemModels;  
+﻿using BookingSystemModels;
 
-
-namespace BookingRodicoDataService
+namespace BookingRodico.BookingRodicoDataService
 {
     public class BookingDataService
     {
 
-        static List<Booking> bookings = new List<Booking>();
+        IBookingDataService _dataService;
 
-        public void AddBooking (Booking booking)
+        public BookingDataService(IBookingDataService bookingDataService)
         {
-            bookings.Add(booking);
+            _dataService = bookingDataService;
 
+        }
+
+        public void AddBooking(Booking booking)
+        {
+            _dataService.AddBooking(booking);
         }
 
         public List<Booking> GetBookings()
         {
-            return bookings;
-
+            return _dataService.GetBookings();
         }
 
         public void DeleteBooking(string passengerName)
         {
-
-            bookings.RemoveAll(b => b.PassengerName.ToLower() == passengerName.ToLower());
-
+            _dataService.DeleteBooking(passengerName);
         }
 
-        public void UpdateBooking (string name, string destination, int baggage, int meal)
+        public void UpdateBooking(string name, string destination, int baggage, int meal)
         {
-            foreach (var booking in bookings)
-             {
+            _dataService.UpdateBooking(name, destination, baggage, meal);
 
-                 if (booking.PassengerName.ToLower() == name.ToLower())
-                 {
-
-                     booking.Destination = destination;
-                     booking.BaggageWeight = baggage;
-                     booking.MealAmount = meal;
-                     
-
-                 }
-            }
-            
         }
+
     }
 }
+
+   
+

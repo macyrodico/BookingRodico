@@ -5,12 +5,6 @@ VisualStudioVersion = 18.4.11605.240
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodico", "BookingRodico.csproj", "{2E76DF6E-8965-4522-94E1-E657B35F6647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoAppService", "BookingRodicoAppService\BookingRodicoAppService.csproj", "{314F1B34-3AE2-874B-FC1F-339229DCD0F0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingRodicoDataService", "BookingRodicoDataService\BookingRodicoDataService.csproj", "{BAE33102-4332-CA67-3366-E2682475057E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingSystemModels", "BookingSystemModels\BookingSystemModels.csproj", "{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,18 +15,6 @@ Global
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E76DF6E-8965-4522-94E1-E657B35F6647}.Release|Any CPU.Build.0 = Release|Any CPU
-		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{314F1B34-3AE2-874B-FC1F-339229DCD0F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BAE33102-4332-CA67-3366-E2682475057E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BAE33102-4332-CA67-3366-E2682475057E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BAE33102-4332-CA67-3366-E2682475057E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BAE33102-4332-CA67-3366-E2682475057E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7AD0B95E-4A08-2F5E-31CD-7CCA04644FE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

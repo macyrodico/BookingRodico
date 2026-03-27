@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BookingSystemModels;  
+﻿using BookingSystemModels;
 using BookingRodicoDataService;
+using BookingRodico.BookingRodicoDataService;
 
 
 namespace BookingRodicoAppService
 {
-    public class BookingService
-    {
+    public class BookingAppService
 
-        BookingDataService dataService = new BookingDataService();
+    {
+        BookingDataService dataService = new BookingDataService (new BookingDBData());
+        
+
 
         public void AddBooking(Booking booking)
         {
