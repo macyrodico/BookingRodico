@@ -28,9 +28,10 @@ namespace BookingRodico.BookingRodicoDataService
             _dataService.DeleteBooking(passengerName);
         }
 
-        public void UpdateBooking(string name, string destination, int baggage, int meal)
+        public void UpdateBooking(string name, string destination, int baggage, int meal, string status, double totalPrice)
         {
-            _dataService.UpdateBooking(name, destination, baggage, meal);
+
+            _dataService.UpdateBooking(name, destination, baggage, meal, status, totalPrice);
 
         }
 

@@ -32,8 +32,12 @@ namespace BookingRodicoDataService
                     BookingId = Guid.NewGuid(),
                     PassengerName = "Macy",
                     Destination = "Thailand",
+                    TravelDate = "04-22-2026",
+                    TravelClass = "Economy",
                     BaggageWeight = 15,
-                    MealAmount = 1
+                    MealAmount = 1,
+                    TotalPrice = 14400,
+                    Status = "Confirmed"
                 });
 
                 SaveDataToJsonFile();
@@ -51,7 +55,6 @@ namespace BookingRodicoDataService
             File.WriteAllText(_jsonFileName, json);
 
         }
-
 
 
         private void RetrieveDataFromJsonFile()
@@ -102,7 +105,7 @@ namespace BookingRodicoDataService
             return bookings;
         }
 
-        public void UpdateBooking(string name, string destination, int baggage, int meal)
+        public void UpdateBooking(string name, string destination, int baggage, int meal, string status, double totalPrice)
         {
             RetrieveDataFromJsonFile();
 
@@ -114,6 +117,8 @@ namespace BookingRodicoDataService
                 existingBooking.Destination = destination;
                 existingBooking.BaggageWeight = baggage;
                 existingBooking.MealAmount = meal;
+                existingBooking.Status = status;
+                existingBooking.TotalPrice = totalPrice;
             }
 
             SaveDataToJsonFile();

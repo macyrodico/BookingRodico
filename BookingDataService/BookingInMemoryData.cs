@@ -36,10 +36,10 @@ namespace BookingRodicoDataService
 
         }
 
-        public void UpdateBooking (string name, string destination, int baggage, int meal)
+        public void UpdateBooking (string name, string destination, int baggage, int meal, string status, double totalPrice)
         {
             foreach (var booking in bookings)
-             {
+            {
 
                  if (booking.PassengerName.ToLower() == name.ToLower())
                  {
@@ -47,9 +47,10 @@ namespace BookingRodicoDataService
                      booking.Destination = destination;
                      booking.BaggageWeight = baggage;
                      booking.MealAmount = meal;
-                     
+                     booking.Status = status;
+                     booking.TotalPrice = totalPrice;
 
-                 }
+                }
             }
             
         }
