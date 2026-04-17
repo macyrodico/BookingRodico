@@ -1,6 +1,6 @@
 ﻿using BookingSystemModels;
 
-namespace BookingRodico.BookingRodicoDataService
+namespace BookingRodico.BookingDataService
 {
     public interface IBookingDataService
     {

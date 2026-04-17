@@ -1,6 +1,5 @@
-﻿using BookingSystemModels;
-using BookingRodicoDataService;
-using BookingRodico.BookingRodicoDataService;
+﻿using BookingRodico.BookingDataService;
+using BookingSystemModels;
 
 
 namespace BookingRodicoAppService

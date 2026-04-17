@@ -1,6 +1,4 @@
 ﻿using BookingRodicoAppService;
-using BookingSystemModels;
-using System.Net.NetworkInformation;
 
 namespace BookingRodico
 {

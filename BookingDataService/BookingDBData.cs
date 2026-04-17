@@ -1,8 +1,7 @@
 ﻿using BookingSystemModels;
 using Microsoft.Data.SqlClient;
-using System.Net.NetworkInformation;
 
-namespace BookingRodico.BookingRodicoDataService
+namespace BookingRodico.BookingDataService
 {
     public class BookingDBData : IBookingDataService
     {
