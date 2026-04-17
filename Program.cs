@@ -1,4 +1,6 @@
 ﻿using BookingRodicoAppService;
+using BookingSystemModels;
+using System;
 
 namespace BookingRodico
 {
@@ -103,27 +105,52 @@ namespace BookingRodico
             Console.Write("Enter Passenger name: ");
             string? name = Console.ReadLine();
 
+            while (string.IsNullOrWhiteSpace(name) || !name.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            {
+                Console.WriteLine("Invalid name! Please enter letters only.");
+                Console.Write("Enter Passenger name: ");
+                name = Console.ReadLine();
+            }
+
             Console.Write("Enter destination: ");
             string? destination = Console.ReadLine();
+
+            while (string.IsNullOrWhiteSpace(destination) || !destination.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+            {
+                Console.WriteLine("Invalid destination! Please enter letters only.");
+                Console.Write("Enter destination: ");
+                destination = Console.ReadLine();
+            }
 
             Console.Write("Enter Travel Date (DD-MM-YYYY): ");
             string? travelDate = Console.ReadLine();
 
+            int classChoice;
             Console.WriteLine("Select Class: 1. Economy (Php 9000) | 2. Business (Php 24000)");
-            int classChoice = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Baggage Weight (Max 20 kg): ");
-            int baggage = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Meal Amount (Max 2): ");
-            int meal = Convert.ToInt32(Console.ReadLine());
-
-
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(destination))
+            
+            while (!int.TryParse(Console.ReadLine(), out classChoice) || classChoice < 1 || classChoice > 2)
             {
-                Console.WriteLine("Name and destination are required.");
-                return;
+                Console.WriteLine("Invalid input! Please enter 1 for Economy or 2 for Business.");
+                Console.WriteLine("Select Class: 1. Economy (Php 9000) | 2. Business (Php 24000)");
             }
+
+            int baggage;
+            Console.WriteLine("Baggage Weight (Max 20 kg): ");
+           
+            while (!int.TryParse(Console.ReadLine(), out baggage) || baggage < 0)
+            {
+                Console.WriteLine("Invalid input! Please enter a valid number.");
+                Console.WriteLine("Baggage Weight (Max 20 kg): ");
+            }
+
+            int meal;
+            Console.Write("Meal Amount (Max 2): ");
+            while (!int.TryParse(Console.ReadLine(), out meal) || meal < 0)
+            {
+                Console.WriteLine("Invalid input! Please enter a valid number.");
+                Console.Write("Meal Amount (Max 2): ");
+            }
+
 
             if(!DateTime.TryParseExact(travelDate, "dd-MM-yyyy", null, 
                 System.Globalization.DateTimeStyles.None, out _))
@@ -256,15 +283,37 @@ namespace BookingRodico
                 {
                     case "1":
                         Console.Write("Enter New Destination: ");
-                        destination = Console.ReadLine();
+                        string newDestination = Console.ReadLine();
+
+                        while (string.IsNullOrWhiteSpace(newDestination) || !newDestination.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
+                        {
+                            Console.WriteLine("Invalid destination! Please enter letters only.");
+                            Console.Write("Enter New Destination: ");
+                            newDestination = Console.ReadLine();
+                        }
+
+                        destination = newDestination;
                         break;
+
                     case "2":
+                        int newBaggage;
                         Console.Write("Enter New Baggage Weight: ");
-                        baggage = Convert.ToInt32(Console.ReadLine());
+                        while (!int.TryParse(Console.ReadLine(), out newBaggage) || newBaggage < 0)
+                        {
+                            Console.WriteLine("Invalid input! Please enter a valid number.");
+                            Console.Write("Enter New Baggage Weight (Max 20kg): ");
+                        }
+                        baggage = newBaggage;
                         break;
                     case "3":
                         Console.Write("Enter New Meal Amount: ");
-                        meal = Convert.ToInt32(Console.ReadLine());
+                        int newMeal;
+                        while (!int.TryParse(Console.ReadLine(), out newMeal) || newMeal < 0)
+                        {
+                            Console.WriteLine("Invalid input! Please enter a valid number.");
+                            Console.Write("Enter New Meal Amount (Max 2): ");
+                        }
+                        meal = newMeal;
                         break;
                     case "4":
                         Console.Write("Enter New Status (Confirmed/Delayed/Cancelled): ");
@@ -306,6 +355,13 @@ namespace BookingRodico
                 {
                     Console.Write("Enter Passenger Name to delete: ");
                     string name = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(name) || int.TryParse(name, out _))
+                {
+                    Console.WriteLine("Invalid entry. Please enter a valid passenger name.");
+                    return;
+
+                }
 
                     Console.Write("Confirm Deletion? (y/n): ");
                     string confirm = Console.ReadLine();
