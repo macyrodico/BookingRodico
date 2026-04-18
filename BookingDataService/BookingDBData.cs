@@ -8,7 +8,7 @@ namespace BookingRodico.BookingDataService
     {
 
         private string connectionString
-        = "Data Source=localhost\\SQLEXPRESS01; Initial Catalog = BookingRodico; Integrated Security = True;" +
+        = "Data Source=localhost\\SQLEXPRESS; Initial Catalog = BookingRodico; Integrated Security = True;" +
             "TrustServerCertificate = True";
 
         private SqlConnection sqlConnection;
