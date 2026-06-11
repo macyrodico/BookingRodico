@@ -9,6 +9,5 @@ namespace BookingRodico.BookingDataService
         List<Booking> GetBookings();
         void DeleteBooking(string passengerName);
         void UpdateBooking(string name, string destination, int baggage, int meal, string status, double totalPrice);
-
     }
 }

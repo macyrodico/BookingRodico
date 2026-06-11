@@ -85,5 +85,53 @@ namespace BookingRodicoAppService
             return true;
 
             }
+
+        public Booking AddBooking(string name, string destination)
+        {
+            var booking = new Booking
+            {
+                BookingId = Guid.NewGuid(),
+                PassengerName = name,
+                Destination = destination,
+                TravelDate = DateTime.Today.ToString("dd-MM-yyyy"),
+                TravelClass = "Economy",
+                BaggageWeight = 0,
+                MealAmount = 0,
+                TotalPrice = 9000.00,
+                Status = "Confirmed"
+            };
+
+            dataService.AddBooking(booking);
+            return booking;
+        }
+
+        public bool UpdateBooking(Guid id, string passengerName, string destination)
+        {
+            var bookings = dataService.GetBookings();
+            var existing = bookings.FirstOrDefault(b => b.BookingId == id);
+
+            if (existing == null) return false;
+
+            dataService.DeleteBooking(existing.PassengerName);
+
+
+            var updated = new Booking
+            {
+                BookingId = id,
+                PassengerName = passengerName,
+                Destination = destination,
+                TravelDate = existing.TravelDate,
+                TravelClass = existing.TravelClass,
+                BaggageWeight = existing.BaggageWeight,
+                MealAmount = existing.MealAmount,
+                Status = existing.Status,
+                TotalPrice = existing.TotalPrice
+            };
+
+            dataService.AddBooking(updated);
+
+            return true;
+
+        }
     }
-    }
+}
